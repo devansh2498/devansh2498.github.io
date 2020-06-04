@@ -157,6 +157,12 @@ section{
         top: 50%;
     }
 }
+@media only screen and (max-width: 450px) {
+    .modal{
+        width: 100%;
+        height: auto;
+    }
+  }
 
 .X{
     position: absolute;
