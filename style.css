@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #25272E;
+    color: white;
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+
+header > h1{
+    color: #25272E;
+    text-align: center;
+    font-family: "Asap", sans-serif;
+}
+
+.score-board{
+    border: 3px solid white;
+    width: 200px;
+    margin:20px auto;
+    font-size: 46px;
+    border-radius:4px ;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: "Asap" , sans-serif;
+    position: relative;
+}
+.badge{
+    background-color:#E2584D ;
+    font-size: 14px;
+    padding: 2px 10px;
+}
+
+#user-label{
+    position: absolute;
+    top: 30px;
+    left: -26px;
+}
+#computer-label{
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+ .result{
+    font-size: 40px;
+    font-family: "Asap" ,sans-serif;
+ }
+.result p{
+      text-align: center;
+      font-weight: bold;
+}
+
+.choices{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.choice img{
+    width: 100px;
+    height: 100px;
+}
+@media only screen and (max-width: 450px) {
+    .choice img{
+        width: 100%;
+        height: auto;
+    }
+  }
+
+.choice{
+    display: inline-block;
+    border: 4px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.choice:hover{
+    cursor: pointer;
+    background: rgb(23, 23, 32);
+}
+
+#action-message{
+    text-align: center;
+    font-family: "Asap", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.instruction{
+    font-size: 15px;
+    font-family: "Asap" , sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+.instruction div{
+    margin-top: 10px;
+}
+
+.green-glow{
+ border: 4px solid #4dcc7d;
+ box-shadow: 0 0 10px #31b43a;
+}
+
+.gray-glow{
+    border: 4px solid #b1b1b1;
+    box-shadow: 0 0 10px #515852;
+}
+
+.red-glow{
+    border: 4px solid #dd5a5a;
+    box-shadow: 0 0 10px #e21919;
+}
+
+section{
+    transition: 1s ;
+}
+
+/* MoDal */
+
+.modal-parent{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.modal{
+    text-align: center;
+    background-color: white;
+    color: #25272E;
+    width: 50%;
+    padding: 30px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-family: "Asap",sans-serif;
+    animation: 1s drop;
+}
+@keyframes drop{
+    0%{
+      top: -100px;  
+    }
+    100%{
+        top: 50%;
+    }
+}
+
+.X{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    cursor: grab
+
+}
+
+.greet{
+    margin-bottom: 10px;
+}
+.greet1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button{
+    font-size: 30px;
+    margin-top: 10px;
+    border:none;
+    color: white;
+    background-color: #25272E;
+    padding: 10px;
+}
+.button:hover{
+    cursor: pointer;
+    background: rgb(23, 23, 32);
+}
