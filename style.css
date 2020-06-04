@@ -159,8 +159,8 @@ section{
 }
 @media only screen and (max-width: 450px) {
     .modal{
-        width: 100%;
-        height: auto;
+        width: 90%;
+        
     }
   }
 
