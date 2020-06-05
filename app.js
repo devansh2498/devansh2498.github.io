@@ -17,6 +17,12 @@ const scissor_div=document.getElementById("s");
     const greet=document.querySelector(".greet");
     const button=document.querySelector(".button");
 
+//for sound effect
+        var win_sound=new Audio();
+        win_sound.src="./sounds/win.mp3";
+        var lose_sound=new Audio();
+        lose_sound.src="./sounds/lose.mp3"
+
 //Adding Event Listeners
 function getComputerChoice(){
     const choices =["r","p","s"];
@@ -51,11 +57,13 @@ button.addEventListener("click",()=>{
 })
 
 function roundWon(){
+    win_sound.play();
     greet.innerHTML=`Congrats!! You won the game :)`;
     modal.style.display="block";
     section.style.filter="blur(5px)";
 }
 function roundLost(){
+    lose_sound.play();
     greet.innerHTML=`Better luck next time... :(`;
     modal.style.display="block";
     section.style.filter="blur(5px)";
@@ -81,6 +89,7 @@ function win(userChoice,computerChoice){
     result_p.innerHTML=`${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. YOU WIN! \uD83D\uDCAF `
     userChoice_div.classList.add("green-glow");
     setTimeout(() => userChoice_div.classList.remove("green-glow"),300)
+    
     roundResult(userScore,computerScore);
 }
 
@@ -91,7 +100,8 @@ function lose(userChoice,computerChoice){
     computerScore_span.innerHTML=computerScore;
     result_p.innerHTML=`${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. YOU LOST... \uD83D\uDCA9`
     userChoice_div.classList.add("red-glow");
-    setTimeout(() => userChoice_div.classList.remove("red-glow"),300)
+    setTimeout(() => userChoice_div.classList.remove("red-glow"),300);
+    
     roundResult(userScore,computerScore);
 
 }
